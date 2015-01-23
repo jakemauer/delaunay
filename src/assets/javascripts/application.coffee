@@ -1,4 +1,5 @@
 $ = require 'jquery'
 
 $ ->
-  console.log $.fn.jquery
+  image = document.getElementById("image")
+  canvas = document.getElementById("canvas")
