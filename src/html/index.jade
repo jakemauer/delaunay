@@ -9,4 +9,17 @@ html
     link( rel='stylesheet', href= assets('stylesheets/application.css') )
     script( src= assets('javascripts/application.js') )
   body
-    //-
+    div(style='position:fixed;width:100%;text-align:center;z-index:1')
+      #menu
+        strong DELAUNAY PAINTER
+        select#modes
+          option SOLID
+          option LINES
+          option SOLID+LINES
+          option SIMPLE
+        button#load LOAD IMAGE
+        button#save SAVE IMAGE
+      picture#picture
+        img#image(src='/images/image.jpg')
+        #markers
+      canvas#canvas
