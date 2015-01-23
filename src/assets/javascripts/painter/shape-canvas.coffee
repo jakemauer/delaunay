@@ -24,8 +24,6 @@ module.exports = class ShapeCanvas
   setupDimensions: ->
     @canvas.width          = @image.width
     @canvas.height         = @image.height
-    @canvas.style.position = "relative"
-    @canvas.style.cursor   = "crosshair"
 
   setupInitialImage: ->
     @context().drawImage @image, 0, 0
