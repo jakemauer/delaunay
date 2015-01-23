@@ -12,7 +12,7 @@ gulp.task('build:js', ['clean:js'], function() {
     // Specify the entry point of your app
     entries: ['./src/assets/javascripts/application.coffee'],
     // Add file extentions to make optional in your requires
-    extensions: ['.coffee']
+    extensions: ['.coffee', '.js']
   });
 
   var bundle = function() {
