@@ -1,8 +1,10 @@
+### Intro
+
+This is a quick tryout of [DZ's boilerplate](https://github.com/dzucconi/boilerplate) and an excuse to play with canvas. 
+
 ### Setup
 
 ```bash
-git clone git@github.com:dzucconi/boilerplate.git new-project
-cd new-project
 bin/setup
 bin/server
 ```
