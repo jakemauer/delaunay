@@ -15,6 +15,7 @@ module.exports = class Polygons
 
     while i < l
       @drawTriangle @triangles[i]
+      i++
   
   drawTriangle: (triangle) ->
     @context.beginPath()
@@ -29,7 +30,6 @@ module.exports = class Polygons
     @context.fill()
     @context.strokeStyle = color
     @context.stroke()
-    i++
 
   clearCanvas: ->
     @context.clearRect 0, 0, @canvasEl.width, @canvasEl.height
