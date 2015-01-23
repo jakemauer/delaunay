@@ -14,20 +14,22 @@ module.exports = class Shapes
     l = @triangles.length
 
     while i < l
-      triangle = @triangles[i]
-      @context.beginPath()
-      @context.moveTo triangle.a.x, triangle.a.y
-      @context.lineTo triangle.b.x, triangle.b.y
-      @context.lineTo triangle.c.x, triangle.c.y
-      @context.closePath()
+      @drawTriangle @triangles[i]
+  
+  drawTriangle: (triangle) ->
+    @context.beginPath()
+    @context.moveTo triangle.a.x, triangle.a.y
+    @context.lineTo triangle.b.x, triangle.b.y
+    @context.lineTo triangle.c.x, triangle.c.y
+    @context.closePath()
 
-      color = @shapeCanvas.getColorAt(triangle.x, triangle.y)
-      
-      @context.fillStyle = color
-      @context.fill()
-      @context.strokeStyle = color
-      @context.stroke()
-      i++
+    color = @shapeCanvas.getColorAt(triangle.x, triangle.y)
+    
+    @context.fillStyle = color
+    @context.fill()
+    @context.strokeStyle = color
+    @context.stroke()
+    i++
 
   clearCanvas: ->
     @context.clearRect 0, 0, @canvasEl.width, @canvasEl.height
