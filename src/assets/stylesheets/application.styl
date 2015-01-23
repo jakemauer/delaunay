@@ -1,1 +1,42 @@
 @import 'base'
+
+* 
+  font-family: Monospace
+  font-size: 12px
+
+
+body 
+  margin: 0px
+  background-color: #f0f0f0
+  text-align: center
+
+
+#menu 
+  display: inline-block
+  padding: 8px 10px
+  color: #444
+  border-bottom: 1px solid #ddd
+  background-color: white
+
+.marker
+  transition-property: width height margin
+  transition-duration: .2s
+  position: absolute
+  background-color: red
+  display: block
+  border-radius: 20px
+  width: 10px
+  height: 10px
+
+.marker:hover
+  width: 20px !important
+  height: 20px !important
+  margin: -5px 0 0 -5px
+  cursor: pointer
+
+picture
+  position:relative
+  display: inline-block
+
+#image
+  display: inline-block
