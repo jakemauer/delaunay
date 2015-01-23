@@ -1,15 +1,15 @@
 $             = require 'jquery'
-ShapeCanvas   = require './shape-canvas'
-Shapes        = require './shapes'
+PolyCanvas    = require './poly-canvas'
+Polygons      = require './polygons'
 Markers       = require './markers'
 MARKER_SIZE   = 10
 
 module.exports = class Painter
   constructor: ({@image, @canvas} = {}) ->
     @vertices    = [ {x: 200, y:60}, {x: 250, y:60}, {x: 225, y:100} ]
-    @shapeCanvas = new ShapeCanvas({@image, @canvas})
+    @polyCanvas  = new PolyCanvas({@image, @canvas})
     @markers     = new Markers
-    @shapes      = new Shapes({@shapeCanvas})
+    @polygons    = new Polygons({@polyCanvas})
     
     @setupListeners()
     @draw()
@@ -31,7 +31,7 @@ module.exports = class Painter
     @markers.draw(@vertices)
 
   drawShapes: ->
-    @shapes.draw(@vertices)
+    @polygons.draw(@vertices)
 
   setupListeners: ->
     @image.addEventListener "mousedown", (e) => @addVertex(e)

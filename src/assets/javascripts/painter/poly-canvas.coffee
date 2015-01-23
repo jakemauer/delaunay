@@ -1,4 +1,4 @@
-module.exports = class ShapeCanvas
+module.exports = class PolyCanvas
   constructor: ({@image, @canvas} = {}) ->
     @setupDimensions()
     @setupInitialImage()

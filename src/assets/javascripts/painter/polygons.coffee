@@ -1,9 +1,9 @@
 Delaunay = require '../delaunay'
 
-module.exports = class Shapes
-  constructor: ({@shapeCanvas} = {}) ->
-    @context  = @shapeCanvas.context()
-    @canvasEl = @shapeCanvas.el()
+module.exports = class Polygons
+  constructor: ({@polyCanvas} = {}) ->
+    @context  = @polyCanvas.context()
+    @canvasEl = @polyCanvas.el()
   
   draw: (vertices) ->
     @clearCanvas()
@@ -23,7 +23,7 @@ module.exports = class Shapes
     @context.lineTo triangle.c.x, triangle.c.y
     @context.closePath()
 
-    color = @shapeCanvas.getColorAt(triangle.x, triangle.y)
+    color = @polyCanvas.getColorAt(triangle.x, triangle.y)
     
     @context.fillStyle = color
     @context.fill()
