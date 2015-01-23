@@ -1,4 +1,4 @@
-module.exports = class Canvas
+module.exports = class ShapeCanvas
   constructor: ({@image, @canvas} = {}) ->
     @setupDimensions()
     @setupInitialImage()
@@ -17,6 +17,8 @@ module.exports = class Canvas
     index = ((x | 0) + (y | 0) * @canvas.width) * 4
     "rgba(" + data[index] + "," + data[index + 1] + "," + data[index + 2] + "," + data[index + 3] + ")"
 
+  el: ->
+    @canvas
 
   setupDimensions: ->
     @canvas.width          = @image.width
