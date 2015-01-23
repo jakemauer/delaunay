@@ -14,3 +14,6 @@ bin/server
 ```
 bin/deploy
 ```
+
+### Acknowledgements
+Uses code from [ironwallaby](https://github.com/ironwallaby/delaunay) and [Señor Doob](http://mrdoob.com/).
